@@ -17,11 +17,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.tooling.preview.PreviewLightDark
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.blackironmess.cryptotracker.crypto.presentation.model.DisplayableNumber
-import com.blackironmess.cryptotracker.ui.theme.CryptoTrackerTheme
 import com.blackironmess.cryptotracker.ui.theme.greenBackground
 
 @Composable
@@ -34,7 +32,7 @@ fun PriceChange(
     val backgroundColor = if(change.value < 0.0) MaterialTheme.colorScheme.errorContainer else greenBackground
 
     Row(
-        modifier = Modifier
+        modifier = modifier
             .clip(RoundedCornerShape(100F))
             .background(backgroundColor)
             .padding(horizontal = 4.dp),
